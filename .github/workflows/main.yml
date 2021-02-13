@@ -51,12 +51,12 @@ jobs:
       run: npm run dev
 
     - name: Upload vendor and public folders
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifact-folder-vendor-public
-          path: |
-            vendor
-            public
+      uses: actions/upload-artifact@v2
+      with:
+        name: artifact-folder-vendor-public
+        path: |
+          vendor
+          public
 
 
   ftp_deploy:
