@@ -28,12 +28,10 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install --prefer-dist --no-progress --no-suggest
 
-  npm_compile:
-    runs-on: ubuntu-latest
-    needs: [ composer_build ]
-    steps:
-      - uses: actions/setup-node@v2
+      - name: Install Node
+        uses: actions/setup-node@v2
         with:
           node-version: 12
-      - run: npm install
-      - run: npm run dev
+        run: npm install
+        run: npm run dev
+
