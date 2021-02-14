@@ -53,9 +53,9 @@ jobs:
     - name: Ftp to webhost
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ftp://${{ secrets.FTP_HOST }}:21/github-action-sample
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        ftp-server: ftp://${{ secrets.FTP_HOST }}:21/github-action-sample
+        ftp-username: ${{ secrets.FTP_USER }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
         exclude: .git*
           - node_modules/**
           - node_modules/**/*
