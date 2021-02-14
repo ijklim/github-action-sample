@@ -56,7 +56,5 @@ jobs:
         ftp-server: ftp://${{ secrets.FTP_HOST }}:21/github-action-sample
         ftp-username: ${{ secrets.FTP_USER }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        exclude: .git*
-          - node_modules/**
-          - node_modules/**/*
+
 
